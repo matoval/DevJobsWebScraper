@@ -7,10 +7,7 @@ with open('jobs.csv') as f:
 
 ## get only developer jobs
 job_urls = l[0]
-counter = 0
 for j in job_urls:
-  counter = counter + 1
-  print(counter)
   filtered_list = []
   uClient = uReq(j)
   job_html = uClient.read()

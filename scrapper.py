@@ -22,11 +22,8 @@ city_url_list.pop(0)
 city_url_list.pop(0)
 
 
-job_list = {}
+
 for url in city_url_list:
-# url = city_url_list[1]
-  print(url)
-  job_list[url] = {}
   my_url = '{}/d/web-html-info-design/search/web'.format(url)
   #get data from url
   uClient = uReq(my_url)
@@ -36,7 +33,6 @@ for url in city_url_list:
   page_soup = soup(page_html, "html.parser")
   #grabs each job title
   job_titles = page_soup.findAll("a", {"class": "result-title"})
-  print(job_titles)
   jobs_url_list = []
   for j in job_titles:
     # print(j['href'])
