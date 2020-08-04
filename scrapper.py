@@ -42,7 +42,7 @@ for url in city_url_list:
     # print(j['href'])
     if j['href']:
       jobs_url_list.append([j['href']])
-  file = open('jobs.csv', 'a', newline='')
+  file = open('jobs.txt', 'a', newline='')
   with file:
     write = csv.writer(file)
     write.writerows(jobs_url_list)
